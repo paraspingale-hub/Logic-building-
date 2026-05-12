@@ -45,7 +45,7 @@ func runTests() {
 		a, b     float64
 		expected float64
 	}{
-		{5.5, 4.5, 0.0},     // Positive + Positive
+		{5.5, 4.5, 10.0},    // Positive + Positive
 		{-10.5, -5.5, 16.0}, // Negative + Negative
 		{-10.0, 5.0, 5.0},   // Negative + Positive (Result is |-5|)
 		{0.0, 0.0, 0.0},     // Zero case
