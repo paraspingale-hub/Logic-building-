@@ -1,4 +1,3 @@
-package go
 /*
 Package main
 Description: Checks if a number is even, returns a boolean, and
