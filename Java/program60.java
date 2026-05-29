@@ -10,7 +10,9 @@ public class program60 {
     {
         Scanner sobj = new Scanner (System.in);
         int iValue = sobj.nextInt();
+        
         ArrayList<Integer> iRet = new ArrayList<>();
+
         iRet = DigitExtraction(iValue);
         
     }
