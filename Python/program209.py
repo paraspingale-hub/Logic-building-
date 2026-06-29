@@ -1,0 +1,3 @@
+arr = "Hello"
+
+print(arr)
