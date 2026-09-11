@@ -33,7 +33,7 @@ class ParkingTicket
         System.out.println("Spot Number: " + this.SpotNnumber);
         System.out.println("Entry Time: " + this.entryTime);
     }
-class Builder
+static class Builder
 {
     public int ticketnumber;
     public String vehicleNumber;
@@ -83,7 +83,7 @@ class program987
 { 
     public static void main(String A[])
     {
-        ParkingTicket pobj1 = new Builder()
+        ParkingTicket pobj1 = new ParkingTicket.Builder()
             .setticketnumber(11)
             .setvehicleNumber("MH12AB1234")
             .setfloorNumber(3)
