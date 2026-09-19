@@ -322,8 +322,38 @@ class TruckSpot extends ParkingSpot
     }
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////
+// 
+// Step 5 :: Parking observer creation (Observer pattern) 
+// used to observe the changes (update display class) made in the parking slot changes  
+// (Concetps : Observer dsystem design pattern)
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////
 
-public class program999 {
+
+
+interface parkingObserver
+{
+    void update();
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+// 
+// Step 6 :: ParkingFloor Class
+// used to manage the parking floor 
+// (Concetps : Obj management , Composition (inherithence ) , arraylist )
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+class ParkingFloor
+{
+    
+}
+
+
+
+public class program1000 {
     public static void main (String a[])
     {
 

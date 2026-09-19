@@ -17,6 +17,16 @@
 
 **Current execution:** Start `main` -> create nothing -> print nothing -> program ends.
 
+## program999.java
+
+1. Java starts in the empty `main` method of `program999`.
+2. Because `main` does not create or use any objects, the program prints nothing and ends.
+3. `ParkingSpot` stores the spot number, spot type, parked vehicle, and occupied status.
+4. `BikeSpot`, `CarSpot`, and `TruckSpot` accept only their matching vehicle type.
+5. `parkVehicle()` occupies an empty spot, while `removeVehicle()` removes the vehicle from an occupied spot. `display()` shows the spot status.
+
+**Current execution:** Start `main` -> perform no parking actions -> print nothing -> program ends.
+
 ## program998.java
 
 1. Java starts execution in the empty `main` method of `program998`.
@@ -25,3 +35,5 @@
 4. If an invalid type is given, the factory throws an error.
 
 **Current execution:** Start `main` -> create nothing -> print nothing -> program ends.
+
+
