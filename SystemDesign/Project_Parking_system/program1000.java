@@ -26,6 +26,10 @@ ________________________________________________________________________
 /////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Represents the different types of vehicals supported by the projects
+
+import java.util.ArrayList;
+import java.util.List;
+
 enum VehicalType
 {
     BIKE , 
@@ -348,7 +352,46 @@ interface parkingObserver
 
 class ParkingFloor
 {
-    
+    //Unique Floor number (floor1 , floor 2 , floor 3 etc )
+    private int floorNumber;
+
+    //collection of all parking spots 
+    private List<ParkingSpot> parkingSpots;
+
+    //collection of observers registerd for the floor 
+    private List<parkingObserver> observer;
+    public ParkingFloor(int floorNumber)
+    {
+        this.floorNumber = floorNumber;
+        this.parkingSpots = new ArrayList<>();
+        this.observer = new ArrayList<>();
+    }
+
+    public int getFloorNumber()
+    {
+        return this.floorNumber;
+    }
+    public void addParkingSpot(ParkingSpot spot)
+    {
+        this.parkingSpots.add(spot);
+    }
+    public void addobserver(parkingObserver observer)
+    {
+        this.observer.add(observer);
+    }
+
+    private void notifyObservers()
+    {
+        for (parkingObserver observer : this.observer)
+        {
+            observer.update();
+        }
+    }
+
+    public ParkingSpot findAlavalblespot()
+    {
+        
+    }
 }
 
 
