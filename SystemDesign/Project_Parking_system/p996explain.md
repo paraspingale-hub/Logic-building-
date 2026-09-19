@@ -16,3 +16,12 @@
 5. These vehicle classes are only definitions at this stage; no object is created or displayed during execution.
 
 **Current execution:** Start `main` -> create nothing -> print nothing -> program ends.
+
+## program998.java
+
+1. Java starts execution in the empty `main` method of `program998`.
+2. Since `main` does not call the factory or create an object, the program prints nothing and ends.
+3. The `vehicalFactory` class contains `createVehical()`. It checks the vehicle type and creates a `Bike`, `Car`, or `Truck` object with the given number.
+4. If an invalid type is given, the factory throws an error.
+
+**Current execution:** Start `main` -> create nothing -> print nothing -> program ends.

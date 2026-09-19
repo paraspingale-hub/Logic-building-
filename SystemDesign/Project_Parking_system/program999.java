@@ -174,7 +174,107 @@ class vehicalFactory
     }
 }
 
-public class program998 {
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+// Step 4 :: Parking Spot creation 
+// used to create Parking spo hairarchy 
+// (Concetps : Encapsulation, Polymorphism ,Abstrction, inheritance)
+// it is used to create an hairarchy for the different types of 
+// parking spots which will be used to park the vehical
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// entry gate -> info gather -> car objet -> parkingspot invoke and check for the spot -> observer degin pattern  -> continues
+abstract class ParkingSpot
+{
+    //PRIMARY KEY
+    //unique number for parking spot 
+    private int spotNumber;
+    private SpotType spotType;
+    private boolean occupied; 
+    // inheritance concept in composition form 
+    private vehical vehicle; //stores info about the vehicle parked in the spot
+    
+
+    // Parametersied Constructor
+    public ParkingSpot(int spotNumber , SpotType spotType)
+    {
+        //initialised with default valuse (charateristics)
+        this.spotNumber = spotNumber;
+        this.spotType = spotType;
+        this.occupied = false; // initially the spot is not occupied
+        this.vehicle = null; // initially no vehicle is parked (it will be new car , new bike , new truck but we dont know right now what will be there ) 
+    }
+
+    //getter methods
+    public int getspotNumber()
+    {
+        return this.spotNumber;
+    }
+    public SpotType getspotType()
+    {
+        return this.spotType;
+    }
+    public boolean getisoccupied()
+    {
+        return this.occupied;
+    }
+    public vehical getvehicle()
+    {
+        return this.vehicle;
+    }
+
+//it is used to park the vehicle 
+//parkVehicle(vehical vehicle) first vehicle is vlass and next vehicle is obj name 
+
+//factoryclass -> find the parking spot -> class the obj of parking spot 
+    public void parkVehicle(vehical vehicle)
+    {
+
+        //handling the spot occupied or not occupied part
+        if(this.occupied == true)
+        {
+            throw new RuntimeException("Parking spot is already occupied ");
+        }
+        else
+        {
+            this.vehicle = vehicle;
+            this.occupied = true; // the spot is occupied by the vehicle r
+        }
+    }
+    public vehical removeVehicle()
+    {
+        if (!this.occupied)
+        {
+            vehical removedVehicle = this.vehicle; // 
+            this.vehicle = null;   // vehicle left the spot 
+            this.occupied = false; // parking spot got empty (vehicle removed)
+            return removedVehicle;
+        }
+        else
+        {
+            throw new RuntimeException("Parking spot is already empty");
+        }
+        
+        
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class program999 {
     public static void main (String a[])
     {
 
