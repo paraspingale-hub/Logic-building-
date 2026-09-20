@@ -32,3 +32,10 @@ class program38
        
     }
 }
+
+/* 
+
+
+
+tring to anlyse the changes maked it the code    
+*/
