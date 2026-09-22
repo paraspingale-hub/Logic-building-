@@ -1,6 +1,6 @@
-class program38
+class program39
 {
-    public boolean  CheckPrime(int iNo)
+    public boolean CheckPrime (int iNo)
 {
     int iCnt = 0;
 
@@ -30,8 +30,11 @@ for(iCnt = 2; iCnt <= (iNo / 2); iCnt++)
     public static void main(String A[])
     {
         int iNo = 90;
-        program38 chk = new program38();
-        chk.CheckPrime(iNo);
+        program39 chk = new program39();
+        boolean bRet = false ;
+        bRet =chk.CheckPrime(iNo);
+
+        
        
     }
 }
